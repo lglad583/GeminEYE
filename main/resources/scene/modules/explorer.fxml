@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vision.gemineye.controllers.modules.ExplorerController">
+   <children>
+      <SplitPane dividerPositions="0.20378619153674832" layoutY="68.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox fx:id="toolsVBox" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="searchHBox">
+                           <children>
+                              <JFXTextField fx:id="filterTextField" alignment="CENTER" labelFloat="true" promptText="Filter" HBox.hgrow="ALWAYS">
+
+                              </JFXTextField>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#enableSearchTools" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <image>
+                                    <Image url="@../../assets/down_arrow.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children></HBox>
+                        <HBox fx:id="advancedSearchHBox">
+                           <children>
+                              <VBox maxWidth="1.7976931348623157E308" spacing="20.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <JFXTextField fx:id="nameTextField" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Name" VBox.vgrow="NEVER" />
+                                    <VBox maxWidth="1.7976931348623157E308">
+                                       <children>
+                                          <Label text="Age Start" textFill="#00000079">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXSlider fx:id="ageStartSlider" max="120.0" maxWidth="1.7976931348623157E308" min="1.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox maxWidth="1.7976931348623157E308">
+                                       <children>
+                                          <Label text="Age End" textFill="#00000062">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <JFXSlider fx:id="ageEndSlider" max="120.0" maxWidth="1.7976931348623157E308" min="1.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="120.0" />
+                                       </children>
+                                    </VBox>
+                                    <JFXComboBox fx:id="roleComboBox" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Role" />
+                                    <JFXComboBox fx:id="raceComboBox" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Race" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#disableSearchTools" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <image>
+                                    <Image url="@../../assets/up_arrow.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ListView fx:id="profileList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                          
+                        </ListView>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" graphicTextGap="0.0" onAction="#addUser" prefWidth="30.0" ripplerFill="#ff8080" text="Remove" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/addprofile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox fx:id="selectedState" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #303030;">
+                           <children>
+                              <JFXButton buttonType="RAISED" graphicTextGap="0.0" onAction="#editProfile" prefWidth="30.0" ripplerFill="#ff8080" text="Remove" textFill="WHITE" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView onDragDetected="#editProfile" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/manage.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" graphicTextGap="0.0" onAction="#deleteProfile" prefWidth="30.0" ripplerFill="#ff8080" text="Remove" textFill="WHITE" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/remove_x.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" graphicTextGap="0.0" onAction="#mergeProfile" prefWidth="30.0" ripplerFill="#ff8080" text="Remove" textFill="WHITE" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/merge_alt.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <Label fx:id="userLabel" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="First Name, Last Name" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox fx:id="profilePane">
+                                 <children>
+                                    <ImageView fx:id="profileImage" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/profile.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane>
+                                             <children>
+                                                <JFXMasonryPane HSpacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <VBox prefWidth="130.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" styleClass="info-section" text="Internal">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin></Label>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label maxWidth="1.7976931348623157E308" styleClass="info-label" text="ID" HBox.hgrow="ALWAYS" />
+                                                                  <Label fx:id="idLabel" maxWidth="1.7976931348623157E308" styleClass="info" text="Label" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label maxWidth="1.7976931348623157E308" text="Role" HBox.hgrow="ALWAYS" />
+                                                                  <Label fx:id="roleLabel" maxWidth="1.7976931348623157E308" text="Label" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefWidth="130.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" styleClass="info-section" text="Name">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin></Label>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label maxWidth="1.7976931348623157E308" styleClass="info-label" text="First" HBox.hgrow="ALWAYS" />
+                                                                  <Label fx:id="firstNameLabel" maxWidth="1.7976931348623157E308" styleClass="info" text="Label" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label maxWidth="1.7976931348623157E308" text="Middle" HBox.hgrow="ALWAYS" />
+                                                                  <Label fx:id="middleNameLabel" maxWidth="1.7976931348623157E308" text="Label" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label maxWidth="1.7976931348623157E308" text="Last" HBox.hgrow="ALWAYS" />
+                                                                  <Label fx:id="lastNameLabel" maxWidth="1.7976931348623157E308" text="Label" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefWidth="130.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" styleClass="info-section" text="Details">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin></Label>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label maxWidth="1.7976931348623157E308" styleClass="info-label" text="Race" HBox.hgrow="ALWAYS" />
+                                                                  <Label fx:id="raceLabel" maxWidth="1.7976931348623157E308" styleClass="info" text="Label" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label maxWidth="1.7976931348623157E308" text="Gender" HBox.hgrow="ALWAYS" />
+                                                                  <Label fx:id="genderLabel" maxWidth="1.7976931348623157E308" text="Label" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label maxWidth="1.7976931348623157E308" text="DOB" HBox.hgrow="ALWAYS" />
+                                                                  <Label fx:id="dobLabel" maxWidth="1.7976931348623157E308" text="Label" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </JFXMasonryPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox style="-fx-background-color: #303030;">
+                           <children>
+                              <JFXButton buttonType="RAISED" graphicTextGap="0.0" onAction="#trainModel" prefWidth="30.0" ripplerFill="#ff8080" text="Remove" textFill="WHITE" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/addalt.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" graphicTextGap="0.0" onAction="#importFaceImage" prefWidth="30.0" ripplerFill="#ff8080" text="Import" textFill="WHITE" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/import.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <Label fx:id="trainLabel" alignment="TOP_RIGHT" maxWidth="1.7976931348623157E308" text="Training Data" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="trainingDataContainer" maxHeight="300.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane VBox.vgrow="SOMETIMES">
+                                 <children>
+                                    <ScrollPane fx:id="imageScrollPane" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                                             <children>
+                                                <JFXMasonryPane fx:id="imagePane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <HBox fx:id="trainingManageContainer" style="-fx-background-color: #303030;">
+                                 <children>
+                                    <JFXButton fx:id="removeTrainingDataButton" buttonType="RAISED" graphicTextGap="0.0" onAction="#onDeleteTrainingDataClick" prefWidth="30.0" ripplerFill="#ff8080" text="Remove" textFill="WHITE" textOverrun="CLIP">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../assets/remove_x.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="moveTrainingDataButton" buttonType="RAISED" graphicTextGap="0.0" onAction="#onMoveTrainingDataClick" prefWidth="30.0" ripplerFill="#ff8080" text="Point" textFill="WHITE" textOverrun="CLIP">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../assets/merge_alt.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Label fx:id="statusTrainingLabel" alignment="TOP_RIGHT" maxWidth="1.7976931348623157E308" text="....." textFill="WHITE" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="emptyState" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Select an active profile to continue." textAlignment="CENTER" textFill="#2e97ff" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

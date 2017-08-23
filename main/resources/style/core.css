@@ -1,0 +1,17 @@
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color:  #303030;
+}
+
+.info-section {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 12pt;
+        -fx-border-width: 2;
+        -fx-border-color: transparent transparent #636363 transparent;
+}
+
+
+.selectable {
+-fx-padding: 10;
+-fx-background-color: transparent;
+}
+

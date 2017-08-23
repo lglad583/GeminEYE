@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vision.gemineye.controllers.modules.TargetsController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #303030;">
+               <children>
+                  <Label fx:id="userLabel" text="Curfew" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXMasonryPane fx:id="curfewsPane" maxHeight="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #303030;">
+               <children>
+                  <Label fx:id="userLabel1" text="Conflicts" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXMasonryPane fx:id="conflictsPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #303030;">
+               <children>
+                  <Label fx:id="userLabel11" text="Restricted" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXMasonryPane fx:id="restrictedPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

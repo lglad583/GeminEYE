@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vision.gemineye.controllers.fragments.ManageUserController">
+   <children>
+      <VBox prefHeight="150.0" prefWidth="100.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" text="User Info" textAlignment="CENTER">
+
+            </Label>
+            <HBox maxWidth="1.7976931348623157E308" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="firstNameField" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="First Name" HBox.hgrow="ALWAYS" />
+                  <JFXTextField fx:id="midNameField" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Middle Name" HBox.hgrow="ALWAYS" />
+                  <JFXTextField fx:id="lastNameField" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Last Name" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox maxWidth="1.7976931348623157E308" spacing="20.0">
+               <children>
+                  <JFXComboBox fx:id="roleComboBox" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Role" HBox.hgrow="ALWAYS" />
+                  <JFXComboBox fx:id="raceComboBox" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Race" HBox.hgrow="ALWAYS" />
+                  <JFXComboBox fx:id="genderComboBox" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Gender" HBox.hgrow="ALWAYS" />
+                  <DatePicker fx:id="dobDatePicker" maxWidth="1.7976931348623157E308" promptText="DOB" />
+               </children>
+            </HBox>
+            <HBox fx:id="accessPanel" spacing="20.0">
+               <children>
+                  <JFXCheckBox fx:id="accessCheckbox" maxWidth="1.7976931348623157E308" text="Access" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets left="-10.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXCheckBox>
+                  <JFXTextField fx:id="accessUsernameField" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Username" HBox.hgrow="ALWAYS" />
+                  <JFXPasswordField fx:id="accessPasswordField" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Password" HBox.hgrow="ALWAYS" />
+                  <JFXPasswordField fx:id="accessPinField" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Pin" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Label maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" text="Rules" textAlignment="CENTER">
+
+            </Label>
+            <HBox spacing="20.0">
+               <children>
+                  <JFXTimePicker fx:id="curfewComboBox" maxWidth="1.7976931348623157E308" promptText="Curfew" HBox.hgrow="ALWAYS" />
+                  <CheckComboBox fx:id="conflictComboBox" blendMode="DARKEN" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <JFXComboBox fx:id="restrictionComboBox" maxWidth="1.7976931348623157E308" promptText="Restricted Areas" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label fx:id="errorLabel" maxWidth="1.7976931348623157E308" text="Error" textFill="#dd2c2c" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXButton onAction="#cancel" text="Cancel" />
+                  <JFXButton fx:id="addButton" onAction="#saveUser" text="Finish">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-border: 0; -fx-box-border: transparent;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vision.gemineye.controllers.modules.FeedsController">
+   <children>
+      <SplitPane prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <SplitPane dividerPositions="0.1" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <VBox maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ListView fx:id="feedsList" maxWidth="1.7976931348623157E308" style="-fx-background-color: #4F4F4F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane fx:id="feedsContainer" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #303030;">
+                           <children>
+                              <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fx:id="feedsView" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </VBox>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="236.0">
+                                 <children>
+                                    <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <JFXMasonryPane fx:id="feedProfilePane" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

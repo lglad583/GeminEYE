@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vision.gemineye.controllers.fragments.TrainingImageData">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="statusLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" minHeight="50.0" text="When you're ready, hit start." translateZ="100.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <AnchorPane VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="parentContainer" alignment="CENTER" minHeight="200.0" minWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="camera" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </AnchorPane>
+            <HBox minHeight="-Infinity" prefHeight="40.0">
+               <children>
+                  <JFXButton fx:id="closeButton" onAction="#closeFrame" prefHeight="40.0" style="-fx-background-color: #828282;" text="Cancel" textFill="WHITE" />
+                  <JFXButton fx:id="startButton" buttonType="RAISED" layoutX="114.0" layoutY="313.0" maxWidth="1.7976931348623157E308" onAction="#captureUser" prefHeight="40.0" style="-fx-background-color: #30c1db;" text="Start" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

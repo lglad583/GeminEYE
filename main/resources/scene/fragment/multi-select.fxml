@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vision.gemineye.controllers.fragments.MultiSelectController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" text="Confirm Selection" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countLabel" maxWidth="1.7976931348623157E308" text="0" textFill="#369bff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000085" />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane fx:id="content" VBox.vgrow="ALWAYS">
+               <children>
+                  <SplitPane fx:id="splitContainer" dividerPositions="0.5" maxWidth="1.7976931348623157E308" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane fx:id="validSection" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox fx:id="validContainerRoot" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox alignment="CENTER" HBox.hgrow="NEVER">
+                                       <children>
+                                          <Label fx:id="validContainerLabel" maxWidth="100.0" text="You can toggle options by clicking on them. " wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                    </VBox>
+                                    <ScrollPane fx:id="validScrollPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <content>
+                                          <AnchorPane>
+                                             <children>
+                                                <JFXMasonryPane fx:id="validContainer" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <HBox fx:id="invalidContainerRoot" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox alignment="CENTER" HBox.hgrow="NEVER">
+                                       <children>
+                                          <Label fx:id="validContainerLabel1" maxWidth="100.0" text="These options are not elgible." wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="validContainerLabel11" maxWidth="100.0" text="No faces found" textFill="#651d1d" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                    </VBox>
+                                    <ScrollPane fx:id="invalidScrollPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <content>
+                                          <AnchorPane>
+                                             <children>
+                                                <JFXMasonryPane fx:id="inValidContainer" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <HBox maxWidth="1.7976931348623157E308">
+               <children>
+                  <JFXButton fx:id="confirmButton" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onConfirmAction" ripplerFill="#f2a324" style="-fx-background-color: #ff3333;" text="Confirm" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
